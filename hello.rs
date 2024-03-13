@@ -17,13 +17,25 @@ fn main() {
 
     println!("=========Integer Overflow=======");
     let age:u8 = 255;
+    /*
     let width:u8 = 256;
     let height:u8 = 257;
     let score:u8 = 258;
+    */
 
     println!("Found it");
     println!("age is {}", age);
+    /*
     println!("width is {}", width);
     println!("height is {}", height);
     println!("score is {}", score);
+    */
+
+    println!("=======floats=========");
+    let result = 10.52; // f64 by default
+    let interest:f32 = 8.35;
+    let cost:f64 = 15000.600;
+    println!("result is {}", result);
+    println!("interest is {}", interest);
+    println!("cost is {}", cost);
 }
