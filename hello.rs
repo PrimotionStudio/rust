@@ -38,4 +38,11 @@ fn main() {
     println!("result is {}", result);
     println!("interest is {}", interest);
     println!("cost is {}", cost);
+
+    println!("======automatic type casting is not allowed=======");
+    /*
+    let interest:f32 = 8; // integer is assigned to a float type
+    println!("interest is {}", interest);
+    println!("integer is assigned to a float type");
+    */
 }
