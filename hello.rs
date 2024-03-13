@@ -77,4 +77,30 @@ fn main() {
     println!("empty string is `{}` -> len: {}", emptystr, emptystr.len());
     let contentstr = String::from("Primotion STudio");
     println!("content string is `{}` -> len: {}", contentstr, contentstr.len());
+
+    println!("=====CONDITIONAL=======");
+    let age = 0;
+    if age >= 18 {      //In rust, parentesis around the conditions is not necessary, the same is
+                        //for elseif
+        println!("You're an adult");
+    } else {
+        println!("You're stil a child");
+    }
+    println!("=======MATCH EXPR======");
+    println!("There are 2 ways to do this");
+    println!("way 1 =>");
+    let ntime = "Afternoon";
+
+    let daytime = match ntime {
+        "Morning"   => "00:00 -> 11:59",
+        "Afternoon" => {
+            println!("Match Found");
+            "12:00 -> 15:59"
+        },
+        "Evening"   => "16:00 -> 23:59",
+        &_         => "Unknown day time format"     // now `&_` is used as a wildcard to match
+                                                    // anything that wasnt found
+    };
+
+    println!("The time of the day is {} and it ranges from {}", ntime, daytime);
 }
