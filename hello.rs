@@ -103,4 +103,29 @@ fn main() {
     };
 
     println!("The time of the day is {} and it ranges from {}", ntime, daytime);
+
+    println!("way 2 =>");
+    let time = "Morning";
+
+    match time {
+        "Morning"   => {
+            println!("Match Found");
+            println!("00:00 -> 11:59");
+        },
+        "Afternoon" => { println!("12:00 -> 15:59"); },
+        "Evening"   => { println!("16:00 -> 23:59"); },
+        &_          => { println!("Unknown day time format"); }     // the difference btw this one
+                                                                    // that last is that the last
+                                                                    // one was storing a value
+                                                                    // into a variable if it
+                                                                    // matched a certain condition
+                                                                    // while this one is just
+                                                                    // executing a funtion if it
+                                                                    // matches.
+                                                                    // NOTE: you could also execute
+                                                                    // a function and still store a
+                                                                    // value as shown in the first
+                                                                    // example
+    };
+
 }
